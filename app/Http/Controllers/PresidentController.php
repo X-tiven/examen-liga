@@ -45,9 +45,11 @@ class PresidentController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(President $president)
+    public function show(President $id)
     {
-        //
+         $president = President::find($id);
+       
+        return view('president.show', compact('president'));
     }
 
     /**
